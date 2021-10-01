@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+				echo 'Practice multibranch pipeline'
                 echo 'Pipeline Build success'
             }
         }
