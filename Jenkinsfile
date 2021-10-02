@@ -16,6 +16,11 @@ pipeline {
             steps {
                 echo 'Pipeline Test success'
             }
+            post { 
+             always { 
+                junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml' 
+        }
+    }
         }
         stage('Release') {
             steps {
